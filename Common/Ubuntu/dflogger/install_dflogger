@@ -28,7 +28,7 @@ else
     if apt-cache search libjsoncpp0 | grep libjsoncpp0; then
         apt-get install -y libjsoncpp0
     else
-        apt-get install -y libjsoncpp
+        apt-get install -y libjsoncpp25
     fi
 fi
 
