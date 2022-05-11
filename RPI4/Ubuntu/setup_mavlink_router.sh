@@ -22,6 +22,7 @@ set -x
 adduser $NORMAL_USER dialout
 
 apt install autoconf automake libtool -y
+apt install git meson ninja-build pkg-config gcc g++ systemd -y
 
 sudo -u $NORMAL_USER -H bash <<EOF
 set -e
@@ -34,11 +35,11 @@ pushd ~/GitHub
  git clone --recurse-submodules https://github.com/01org/mavlink-router
  pushd mavlink-router
   git submodule update --init --recursive
-  ./autogen.sh && ./configure CFLAGS='-g -O2' \
-            --sysconfdir=/etc --localstatedir=/var --libdir=/usr/lib64 \
-            --prefix=/usr
-  time make
-  sudo make install
+  
+  meson setup build . -Dprefix=/usr
+  time ninja -C build
+  sudo git config --global --add safe.directory $(pwd)
+  sudo ninja -C build install
  popd
 popd
 
