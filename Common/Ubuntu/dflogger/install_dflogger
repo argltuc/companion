@@ -25,7 +25,11 @@ apt-get install -y build-essential libjsoncpp-dev
 if apt-cache search libjsoncpp1 | grep libjsoncpp1; then
     apt-get install -y libjsoncpp1
 else
-    apt-get install -y libjsoncpp0
+    if apt-cache search libjsoncpp0 | grep libjsoncpp0; then
+        apt-get install -y libjsoncpp0
+    else
+        apt-get install -y libjsoncpp
+    fi
 fi
 
 sudo -u $NORMAL_USER -H bash <<EOF
