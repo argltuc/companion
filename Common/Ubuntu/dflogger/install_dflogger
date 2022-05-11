@@ -43,8 +43,10 @@ fi
 
 pushd ~/GitHub
  rm -rf dronekit-la
- git clone --recurse-submodules http://github.com/peterbarker/dronekit-la
+ git clone --recurse-submodules https://github.com/dronekit/dronekit-la.git
+ 
  pushd dronekit-la
+  git submodule update --init
   time make dataflash_logger
   cp dataflash_logger \$DFLOGGER_HOME/
  popd
