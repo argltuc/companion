@@ -21,7 +21,7 @@ apt-get dist-upgrade -y
 apt-get -y install python3-numpy python3-pip python3-opencv
 
 # pymavlink deps:
-apt-get install -y libxml2-dev libxslt1.1 libxslt1-dev libz-dev python-lxml
+apt-get install -y libxml2-dev libxslt1.1 libxslt1-dev libz-dev python3-lxml
 time pip install future
 time pip3 install future
 
