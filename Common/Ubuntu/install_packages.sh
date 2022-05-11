@@ -18,7 +18,7 @@ apt-get update
 apt-get dist-upgrade -y
 
 # install python, numpy, pip
-apt-get -y install python-dev python-numpy python3-numpy python-pip python-opencv python3-pip
+apt-get -y install python3-numpy python3-pip python3-opencv
 
 # pymavlink deps:
 apt-get install -y libxml2-dev libxslt1.1 libxslt1-dev libz-dev python-lxml

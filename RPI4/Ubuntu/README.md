@@ -1,8 +1,8 @@
 # RPi Ubuntu setup script for use as companion computer.
 
-These instructions create an APSync image for the RPI4 based on the official Ubuntu 18.04 LTS images.
+These instructions create an APSync image for the RPI4 based on the official Ubuntu 22.04 LTS images.
 
-Download Ubuntu LTS image from https://ubuntu.com/download/raspberry-pi.  18.04 is the recommended image, for RPi3 and RPi4 use the 64bit image because even though there are only marginal difference between using 32bit vs 64bit, using the 64bit image provides common ground between our images.
+Download Ubuntu LTS image from https://ubuntu.com/download/raspberry-pi.  22.04 is the recommended image, for RPi3 and RPi4 use the 64bit image because even though there are only marginal difference between using 32bit vs 64bit, using the 64bit image provides common ground between our images.
 
 Flash image onto SD card using Balena Etcher which can be downloaded from https://www.balena.io/etcher/.   This steps takes about 10min.
 
